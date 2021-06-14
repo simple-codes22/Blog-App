@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'CSS/signup.css' %}">
+{% endblock%}
+{% block title %}
+    <title>Blog | Sign Up</title>
+{% endblock %}
+
+{% block main %}
+    <main class="box">
+        <div class="signup-case">
+            <form action="" method="POST">{% csrf_token %}
+                <div class="f-name-block">
+                    <input type="text" name="f-name" id="f-name" class="input">
+                </div>
+                <div class="l-name-block">
+                    <input type="text" name="l-name" id="l-name" class="input">
+                </div>
+                <div class="e-mail-block">
+                    <input type="text" name="e-mail" id="e-mail" class="input">
+                </div>
+                {% if user.is_publisher %}
+                <div class="password-block">
+                    <input type="password" name="password" id="password" class="input">
+                </div>
+                {% endif %}
+                <button class="btn">Sign Up</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

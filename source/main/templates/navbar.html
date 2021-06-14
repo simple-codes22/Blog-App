@@ -1,0 +1,47 @@
+<style>
+    * {
+        margin:0;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background:rgba(0, 180, 30, 0.603);
+        position:absolute;
+        left:0;
+        right:0;
+        height:60px;
+    }
+    .nav-set {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        right:30px;
+    }
+    .nav-links {
+        margin:20px;
+    }
+    .navs {
+        text-decoration: none;
+        color:white;
+        font-size:1rem;
+        font-family: sans-serif;
+        transition: all .5s ease;
+    }
+    nav > a {
+        position: absolute;
+        left:30px;
+    }
+</style>
+<nav>
+    <a href="/" class="navs">Blog House</a>
+    <ul class="nav-set">
+        <li class="nav-links"><a href="{% url 'main:index'%}" class="navs">Home</a></li>
+        <li class="nav-links"><a href="{% url 'main:sign-up' %}" class="navs">Sign Up</a></li>
+        <li class="nav-links"><a href="" class="navs">Login</a></li>
+        <li class="nav-links"><a href="" class="navs">Support</a></li>
+    </ul>
+</nav>
