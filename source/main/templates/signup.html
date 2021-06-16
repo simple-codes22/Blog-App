@@ -12,20 +12,21 @@
         <div class="signup-case">
             <form action="" method="POST">{% csrf_token %}
                 <div class="f-name-block">
-                    <input type="text" name="f-name" id="f-name" class="input">
+                    <input type="text" placeholder="Enter First Name" name="f-name" id="f-name" class="input">
                 </div>
                 <div class="l-name-block">
-                    <input type="text" name="l-name" id="l-name" class="input">
+                    <input type="text" placeholder="Enter Last Name" name="l-name" id="l-name" class="input">
                 </div>
                 <div class="e-mail-block">
-                    <input type="text" name="e-mail" id="e-mail" class="input">
+                    <input type="text" placeholder="E-Mail" name="e-mail" id="e-mail" class="input">
                 </div>
                 {% if user.is_publisher %}
                 <div class="password-block">
-                    <input type="password" name="password" id="password" class="input">
+                    <input type="password" placeholder="Password" name="password" id="password" class="input">
                 </div>
                 {% endif %}
                 <button class="btn">Sign Up</button>
+                <footer class="form-footer"><small>Already Registered? <a href="{% url 'main:login' %}">Login</a></small></footer>
             </form>
         </div>
     </main>

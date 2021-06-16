@@ -1,0 +1,80 @@
+body {
+    width:100%;
+    height:100%;
+    animation: color 9s ease alternate infinite;
+}
+
+main.box {
+    position:fixed;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-case {
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-case > form {
+    height:430px;
+    width:350px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    background:rgba(255, 255, 255, 0.548);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.747);
+}
+.input {
+    width: 300px;
+    height:30px;
+    border: 3px solid rgba(36, 35, 35, 0.445);
+    border-radius:0;
+    outline:0;
+    margin:10px;
+    transition:border .5s ease-in-out, background .5s ease-in-out;
+}
+.input:focus {
+    border: 3px solid rgba(10, 10, 10, 0.822);
+    background: rgb(230, 230, 230);
+}
+
+.form-footer {
+    position:absolute;
+    bottom:20px;
+    right:30px;
+}
+
+.btn {
+    font-weight:400;
+    margin:10px;
+    width:80px;
+    height:40px;
+    background:transparent;
+    border-radius: 0;
+    border:3px solid rgba(36, 35, 35, .445);
+    color:rgba(48, 44, 44, 0.87);
+    cursor:pointer;
+    transition:background .5s ease-in-out, color .5s ease-in-out, border .5s ease-in-out;
+}
+
+.btn:hover {
+    background: rgba(47, 70, 119, 0.719);
+    color:rgb(255, 255, 255);
+    border:3px solid zrgba(10, 10, 10, 0.822);
+}
+
+@keyframes color {
+    0% {background-color:  rgb(180, 86, 49, .89);}
+    25% {background-color: rgb(33, 207, 77, .89)}
+    50% {background-color: rgb(10, 22, 133, .89)}
+    75% {background-color: rgb(240, 227, 231, .89);}
+    100% {background-color: rgba(255, 217, 0, 0.89);}
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}">
+{% endblock%}
+{% block title %}
+    <title>Blog | Login</title>
+{% endblock %}
+
+{% block main %}
+    <main class="box">
+        <div class="login-case">
+            <form action="" method="POST">{% csrf_token %}
+                <div class="f-name-block">
+                    <input type="text" placeholder="First name" name="f-name" id="f-name" class="input">
+                </div>
+                <div class="e-mail-block">
+                    <input type="text" placeholder="E-Mail" name="e-mail" id="e-mail" class="input">
+                </div>
+                {% if user.is_publisher %}
+                <div class="password-block">
+                    <input type="password" placeholder="Password" name="password" id="password" class="input">
+                </div>
+                {% endif %}
+                <button class="btn">Login</button>
+                <footer class="form-footer"><small>Not Registered? <a href="{% url 'main:sign-up' %}">Sign-Up</a></small></footer>
+            </form>
+        </div>
+    </main>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'JS/login.js' %}"></script>
+{% endblock %}
