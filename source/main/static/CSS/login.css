@@ -52,6 +52,8 @@ main.box {
     right:30px;
 }
 
+.form-footer  a:visited {color:blue;}
+
 .btn {
     font-weight:400;
     margin:10px;

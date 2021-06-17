@@ -20,6 +20,7 @@ main.box {
     align-items: center;
 }
 .signup-case > form {
+    border-radius: 2px;
     height:430px;
     width:370px;
     display:flex;
@@ -50,6 +51,7 @@ main.box {
     bottom:20px;
     right:30px;
 }
+.form-footer  a:visited {color:blue;}
 .btn {
     font-weight:400;
     margin:10px;

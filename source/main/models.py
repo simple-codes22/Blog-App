@@ -5,6 +5,7 @@ class User(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     e_mail = models.EmailField(editable=True)
+    username = models.CharField(max_length=30, default="Anonymous")
     is_publisher = False
     def get_name(self):
         return f"{self.first_name} {self.last_name}"

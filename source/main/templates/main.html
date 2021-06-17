@@ -9,10 +9,24 @@
 {% block main %}
     {% include 'navbar.html' %}
     <main>
+        {% for individ in content %}
+            <div class="main">
+                <div class="title">
+                    {{individ.title}} <div class="author">By {{individ.author.first_name}} {{individ.author.last_name}}</div>
+                </div>
+                <div class="content-showcase">
+                    {{individ.post}}
+                </div>
+                <div class="time-controls">
+                    Posted at {{individ.date}}
+                    <a class="click" href="{% url 'main:view-post' %}">More</a>
+                    
+                </div>
+            </div>
+        {% endfor %}
+        <aside>
 
+        </aside>
     </main>
-    <footer>
-
-    </footer>
 {% endblock %}
 {% block script %}<script src="{% static 'JS/main.js'%}"></script>{% endblock %}
